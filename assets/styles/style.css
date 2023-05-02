@@ -1,0 +1,207 @@
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-tral: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --light-state-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+  font-family: "VariableFont";
+  src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+html {
+  font-family: "VariableFont", Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+  max-width: 430px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.14);
+  height: fit-content;
+  border-radius: 2rem;
+}
+
+.result {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  background: linear-gradient(var(--light-state-blue), var(--light-royal-blue))
+}
+
+.result__your-result {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-lavender);
+}
+
+.result__circle {
+  margin: 1rem auto;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  padding-top: 1.25rem;
+}
+
+.circle__score {
+  display: block;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 1.25;
+  margin-top: 0.25rem;
+}
+
+.circle__total {
+  display: block;
+  color: var(--light-lavender);
+  opacity: 0.6;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.result__grade {
+  display: block;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+
+.result__comment {
+  display: block;
+  color: var(--light-lavender);
+  font-weight: 700;
+}
+
+.summary {
+  padding: 2rem;
+}
+
+.summary__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.summary__item {
+  background-color: antiquewhite;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.summary__item--red {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.summary__item--orange {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.summary__item--green {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.summary__item--blue {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+
+.item__title {
+  font-weight: 700;
+}
+
+.item__title--red {
+  color: hsla(0, 100%, 67%, 0.9);
+}
+
+.item__title--orange {
+  color: hsla(39, 100%, 56%, 0.9);
+}
+
+.item__title--green {
+  color: hsla(166, 100%, 37%, 0.9);
+}
+
+.item__title--blue {
+  color: background-color: hsla(234, 85%, 45%, 0.9);
+}
+
+.item__score {
+  margin-left: auto;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.black {
+  color: black;
+}
+
+.button {
+  background-color: var(--dark-gray-blue);
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 100rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.button:hover,
+.button:active {
+  background: linear-gradient(var(--light-state-blue), var(--light-royal-blue));
+}
+
+@media (min-width: 600px) {
+
+  body {
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    max-width: none;
+    width: min(95%, 680px);
+  }
+
+  .result {
+    border-radius: 2rem;
+    flex-basis: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+
+  .summary {
+    flex-basis: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+
+  .result__circle {
+    margin: 2rem auto;
+  }
+
+  .result__grade {
+    margin: 0.75rem auto;
+  }
+
+}
